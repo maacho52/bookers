@@ -1,14 +1,21 @@
 <h1 class="heading">Books</h1>
- <div class="table">
+ <table>
    <% @books.each do |book| %>
-     <p>title</p>
+    <tr>
+      <th>title</th>
+      <th>body</th>
+    </tr>
+
+    <tr>
      <span><%= book.title %></span>
-     <p>body</p>
      <span><%= book.body %></span>
      <%= link_to "Show", book_path(@book.id) %>
      <%= link_to "Edit", edit_book_path(@book.id) %>
      <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+    </tr>
+
    <% end %>
+  </table>
 
 
 <div class="links"></div>
