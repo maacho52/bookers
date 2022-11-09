@@ -6,6 +6,7 @@ class BooksController < ApplicationController
 
   def create
     book = Book.new(book_params)
+    book.save
     
     if @book.save
       redirect_to book_path()
@@ -32,8 +33,8 @@ class BooksController < ApplicationController
     else
       render :edit
     end
+    
     book.update(book_params)
-    redirect_to
   end
 
   def destroy
