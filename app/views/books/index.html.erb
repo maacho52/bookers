@@ -1,25 +1,24 @@
 <h1 class="heading">Books</h1>
  <table>
-   <% @books.each do |book| %>
     <thead>
    　 <tr>
       <th>title</th>
       <th>body</th>
       <th colspan="3"></th>
    　 </tr>
-    </thead>　 
+    </thead>
 
     <tbody>
      <tr>
-      <td><span><%= book.title %></span></td>
-      <td><span><%= book.body %></span></td>
-      <td><%= link_to "Show", book_path(@book.id) %></td>
-      <td><%= link_to "Edit", edit_book_path(@book.id) %></td>
-      <td><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
+      <% @books.each do |book| %>
+        <td><span><%= book.title %></span></td>
+        <td><span><%= book.body %></span></td>
+      <% end %>
+        <td><%= link_to "Show", book_path(@book.id) %></td>
+        <td><%= link_to "Edit", edit_book_path(@book.id) %></td>
+        <td><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
      </tr>
-    </tbody> 
-
-   <% end %>
+    </tbody>
   </table>
 
 
@@ -36,7 +35,7 @@
   </ul>
 <% end %>
 
-<%= form_with model: @book, url: '/books', method: :post do |f| %>
+<%= form_with model:@book, url:'/books', method: :post do |f| %>
   <h4>Title</h4>
   <%= f.text_field :title %>
 
