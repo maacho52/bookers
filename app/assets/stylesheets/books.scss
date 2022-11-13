@@ -1,3 +1,37 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.success-message {
+  color: green;
+
+}
+
+/*ページの内容すべて囲む*/
+.contents {
+  margin: 20px 0 0 40px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+/*一覧ページの投稿データ*/
+.post-content {
+  margin: 0 10px 0;
+}
+
+/*showやeditの下部にあるリンクボタン*/
+.buttun {
+  margin: 0 10px;
+}
+
+/*リンクボタン*/
+.link {
+  color: gray;
+}
