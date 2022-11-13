@@ -1,4 +1,4 @@
-<%= flash[ :notice] %>
+<h2><%= flash[ :notice] %></h2>
 <p>title:</p>
 <span><%= @book.title %></span>
 
@@ -6,6 +6,6 @@
 <span><%= @book.body %></span>
 
 
-<%= link_to "Edit", edit_book_path(@book.id) %>
-<p>|</p>
-<%= link_to "Back", '/books' %>
+<span><%= link_to "Edit", edit_book_path(@book.id) %></span>
+<span>|</span>
+<span><%= link_to "Back", '/books' %></span>
