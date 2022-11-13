@@ -1,4 +1,4 @@
-<%= flash[:notice] %>
+<h3 class="success-message"><%= flash[:notice] %></h3>
 <h2 class="heading">Books</h2>
  <table>
     <thead>
@@ -33,7 +33,7 @@
   </ul>
 <% end %>
 
-<div class="create">
+<div class="box">
  <%= form_with model:@book, url:'/books', method: :post do |f| %>
   <h4>Title</h4>
   <%= f.text_field :title %>
