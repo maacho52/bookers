@@ -9,6 +9,7 @@
 
 .success-message {
   color: green;
+  margin: 40px 60px;
 
 }
 
@@ -26,12 +27,31 @@ h2 {
   margin: 0 10px 0;
 }
 
-/*showやeditの下部にあるリンクボタン*/
-.buttun {
-  margin: 0 10px;
+.button {
+  margin: 10px;
+  
 }
 
 /*リンクボタン*/
 .link {
   color: gray;
+}
+
+/*showページのCSS*/
+.title-content {
+  margin: 40px 60px;
+}
+
+.body-content {
+  margin: 40px 60px;
+}
+
+/*showページのリンクボタン*/
+.button-show {
+  margin: 30px;
+}
+
+/*editページのリンクボタン*/
+.button-edit {
+  margin-top: 10px;
 }
